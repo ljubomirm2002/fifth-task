@@ -46,13 +46,12 @@ var calculator = {};
             return num;
         };
         /**From text make array of numbers and operators 
-         * and array of operator position
          * @param text string
-         * @return [Array,Array] | Error 
+         * @return [Array] | Error 
          */
         this.parseInput = (text) => {
             let i, currentNumber = text[0], t;
-            let numbers = [], indexes = [];
+            let numbers = [];
             for (i = 1; i < text.length; i++)
             {
                 t = text[i];
@@ -68,7 +67,6 @@ var calculator = {};
                             throw new Error("NaN");
                         numbers.push(this.textToNumber(currentNumber));
                         numbers.push(t);
-                        indexes.push(numbers.length - 1);
                         currentNumber = "";
                         break;
                     default:
@@ -78,33 +76,35 @@ var calculator = {};
             }
             if (currentNumber !== '')
                 numbers.push(this.textToNumber(currentNumber));
-            return [numbers, indexes];
+            return numbers;
         };
         this.submit = (e) => {
             this.prevent(e);
             try {
-                let [num,index] = this.parseInput(this.INPUT.value);
-                let i,j;
-                for (i = 0; i < index.length; i++)
+                let num = this.parseInput(this.INPUT.value);
+                let j,i=num.length;
+                for (j = 0; j < i; j++)
                 {
-                    j = index[i];
                     switch (num[j]) {
                         case "*":
                             num.splice(j - 1, 3, num[j - 1] * num[j + 1]);
+                            i--;
+                            j--;
                             break;
                         case "/":
                             if (num[j + 1] == 0)
                                 throw new Error("NaN");
                             num.splice(j - 1, 3, num[j - 1] / num[j + 1]);
+                            i--;
+                            j--;
                             break;
                         default:
-                            throw new Error("NaN");
                             break;
                     }
                 }
                 let n = num.reduce((previous, current) => previous + current, 0);
                 //console.log(this.INPUT.value + `=${n}`);
-                this.INPUT.value = n;
+                this.INPUT.value = n.toFixed(2);
             }
             catch (err) {
                 this.INPUT.value = "ERR";
@@ -115,7 +115,7 @@ var calculator = {};
         const RESET = document.querySelector(".reset-button");
         const DEL = document.querySelector(".del-button");
         const SUBMIT = document.querySelector(".submit-button");
-        
+
         BUTTONS.forEach(b => {
             b.addEventListener("keypress", this.prevent);
             b.addEventListener("click", this.addToCurrent);
