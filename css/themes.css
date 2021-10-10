@@ -1,0 +1,26 @@
+/*Theme 1*/
+.theme1 {
+    --body-font-color: hsl(0, 0%, 100%);
+    --body-background-color: hsl(222, 26%, 31%);
+    --input-backround-color: hsl(224, 36%, 15%);
+    --normal-button-color: hsl(221, 14%, 31%);
+    --normal-button-background: hsl(30, 25%, 89%);
+    --normal-button-shadow: hsl(28, 16%, 65%);
+    --del-button-background: hsl(225, 21%, 49%);
+    --del-button-shadow: hsl(224, 28%, 35%);
+    --submit-button-background: hsl(6, 63%, 50%);
+    --submit-button-shadow: hsl(6, 70%, 34%);
+    --submit-button-color: hsl(0, 0%, 100%);
+    --bar-background-color: hsl(223, 31%, 20%);
+
+    /*Hover*/
+    --normal-hover-background: hsl(31, 100%, 100%);
+    --normal-hover-shadow: hsl(27, 15%, 65%);
+    --del-hover-background: hsl(224, 51%, 76%);
+    --del-hover-shadow: hsl(225, 28%, 35%);
+    --submit-hover-background: hsl(6, 93%, 67%);
+    --submit-hover-shadow: hsl(6, 70%, 34%);
+}
+.theme1 .circle:first-of-type {
+    visibility: visible;
+}
