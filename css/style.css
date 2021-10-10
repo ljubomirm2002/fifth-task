@@ -79,8 +79,13 @@ header {
 }
 .circle {
     border-radius: 50%;
-    background: var(--submit-button-background);
+    background-color: var(--submit-button-background);
     visibility: hidden;
+}
+.circle:hover,
+.bar:hover .circle {
+    cursor: pointer;
+    background-color: var(--submit-hover-background);
 }
 .theme-numbers,
 .bar {
@@ -92,6 +97,7 @@ header {
     width: 71px;
     height: 26px;
     padding: 4px;
+    cursor: pointer;
 }
 /*Form*/
 form {

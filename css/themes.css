@@ -2,7 +2,7 @@
 .theme1 {
     --body-font-color: hsl(0, 0%, 100%);
     --body-background-color: hsl(222, 26%, 31%);
-    --input-backround-color: hsl(224, 36%, 15%);
+    --input-backround-color: hsl(223, 37%, 15%);
     --normal-button-color: hsl(221, 14%, 31%);
     --normal-button-background: hsl(30, 25%, 89%);
     --normal-button-shadow: hsl(28, 16%, 65%);
@@ -22,5 +22,59 @@
     --submit-hover-shadow: hsl(6, 70%, 34%);
 }
 .theme1 .circle:first-of-type {
+    visibility: visible;
+}
+
+/*Theme 2*/
+.theme2 {
+    --body-font-color: hsl(60, 10%, 19%);
+    --body-background-color: hsl(0, 0%, 90%);
+    --input-backround-color: hsl(0, 0%, 93%);
+    --normal-button-color: hsl(60, 10%, 19%);
+    --normal-button-background: hsl(45, 7%, 89%);
+    --normal-button-shadow: hsl(35, 11%, 61%);
+    --del-button-background: hsl(185, 42%, 37%);
+    --del-button-shadow: hsl(185, 58%, 25%);
+    --submit-button-background: hsl(25, 98%, 40%);
+    --submit-button-shadow: hsl(25, 99%, 27%);
+    --submit-button-color: hsl(0, 0%, 100%);
+    --bar-background-color: hsl(0, 5%, 81%);
+
+    /*Hover*/
+    --normal-hover-background: hsl(0, 0%, 100%);
+    --normal-hover-shadow: hsl(34, 11%, 61%);
+    --del-hover-background: hsl(184, 40%, 56%);
+    --del-hover-shadow: hsl(184, 59%, 25%);
+    --submit-hover-background: hsl(25, 100%, 61%);
+    --submit-hover-shadow: hsl(25, 99%, 27%);
+}
+.theme2 .circle:nth-of-type(2) {
+    visibility: visible;
+}
+
+/*Theme 3*/
+.theme3 {
+    --body-font-color: hsl(52, 100%, 62%);
+    --body-background-color: hsl(268, 74%, 9%);
+    --input-backround-color: hsl(268, 71%, 12%);
+    --normal-button-color: hsl(52, 100%, 62%);
+    --normal-button-background: hsl(268, 47%, 21%);
+    --normal-button-shadow: hsl(290, 70%, 36%);
+    --del-button-background: hsl(281, 89%, 26%);
+    --del-button-shadow: hsl(285, 91%, 52%);
+    --submit-button-background: hsl(176, 100%, 44%);
+    --submit-button-shadow: hsl(177, 92%, 70%);
+    --submit-button-color: hsl(198, 20%, 13%);
+    --bar-background-color: hsl(268, 71%, 12%);
+
+    /*Hover*/
+    --normal-hover-background: hsl(268, 54%, 44%);
+    --normal-hover-shadow: hsl(290, 70%, 36%);
+    --del-hover-background: hsl(280, 56%, 44%);
+    --del-hover-shadow: hsl(285, 91%, 52%);
+    --submit-hover-background: hsl(176, 100%, 79%);
+    --submit-hover-shadow: hsl(176, 93%, 70%);
+}
+.theme3 .circle:last-of-type {
     visibility: visible;
 }
